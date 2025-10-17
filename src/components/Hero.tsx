@@ -5,7 +5,7 @@ import screenshotCalendar from "@/assets/screenshot-calendar.png";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero py-20 md:py-32">
+    <section className="relative overflow-clip bg-gradient-hero py-20 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
       
       <div className="container relative mx-auto px-4">
