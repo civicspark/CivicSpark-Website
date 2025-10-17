@@ -35,7 +35,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="bg-muted py-20 overflow-hidden">
+    <section id="features" className="bg-muted py-20">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center" data-aos="fade-up">
           <div className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
