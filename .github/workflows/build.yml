@@ -1,40 +1,51 @@
 
-name: build website
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
+# These permissions are required for the deploy-pages action
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Set up Ruby and Install Gems
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1'
-        bundler-cache: true
-      working-directory: ./jekyll
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build project
+        run: npm run build
+        
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './dist'
 
-    - name: Step 1 - Install Dependencies
-      run: npm install
-    - name: Step 2 - Build Project
-      run: npm run build
-    - name: Step 3 - copy contents into jekyll folder and cd
-      run: cp -r dist/* jekyll && cd
-    - name: Step 4 - run bundler install
-      run: bundle install
+  deploy:
+    # This job requires the build job to succeed
+    needs: build
+    runs-on: ubuntu-latest
     
+    # Grant the GITHUB_TOKEN permissions to deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
