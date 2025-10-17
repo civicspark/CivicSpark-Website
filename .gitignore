@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 .vite
+
+# jekyll related items
+jekyll/_site
+jekyll/.sass-cache
+jekyll/.jekyll-*
+jekyll/vendor
