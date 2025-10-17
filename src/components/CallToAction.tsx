@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Apple } from "lucide-react";
+import { Download } from "lucide-react";
 import screenshotAcademy from "@/assets/screenshot-academy.png";
 
 const CallToAction = () => {
@@ -19,7 +19,7 @@ const CallToAction = () => {
                 size="lg" 
                 className="group bg-white text-primary hover:bg-white/90 hover:shadow-lg transition-all duration-300"
               >
-                <Apple className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
+                <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
                 Download on App Store
               </Button>
               <Button 
