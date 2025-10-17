@@ -47,7 +47,6 @@ const ScreenshotCarousel = () => {
           plugins={[
             Autoplay({
               delay: 3000,
-              direction: "backward",
             }),
           ]}
           className="w-full"
@@ -55,7 +54,7 @@ const ScreenshotCarousel = () => {
           data-aos-delay="100"
         >
           <CarouselContent className="-ml-4">
-            {screenshots.map((screenshot, index) => (
+            {screenshots.concat(screenshots).map((screenshot, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="text-center">
                   <div className="mb-4 rounded-3xl bg-gradient-hero p-6">
