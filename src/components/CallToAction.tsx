@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, Apple } from "lucide-react";
-import screenshotHome from "@/assets/screenshot-home.png";
+import screenshotAcademy from "@/assets/screenshot-academy.png";
 
 const CallToAction = () => {
   return (
@@ -36,7 +36,7 @@ const CallToAction = () => {
             <div className="w-64 md:w-80">
               <div className="rounded-[2.5rem] bg-gray-900 p-2 shadow-2xl">
                 <img 
-                  src={screenshotHome} 
+                  src={screenshotAcademy} 
                   alt="CivicSpark App" 
                   className="w-full rounded-[2rem]"
                 />
