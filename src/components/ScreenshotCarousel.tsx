@@ -24,6 +24,12 @@ const screenshots = [
     title: "Learn civic engagement",
     description: "Academy",
   },
+  {
+    image: screenshotCalendar,
+    title: "Find polling locations near you",
+    description: "Map",
+  }
+
 ];
 
 const ScreenshotCarousel = () => {
@@ -41,6 +47,7 @@ const ScreenshotCarousel = () => {
           plugins={[
             Autoplay({
               delay: 3000,
+              direction: "backward",
             }),
           ]}
           className="w-full"
