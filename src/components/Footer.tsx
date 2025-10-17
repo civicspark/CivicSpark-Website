@@ -4,17 +4,14 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <div className="mb-4 flex items-center justify-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-hero">
-              <span className="text-xl font-bold text-white">CS</span>
-            </div>
+          <img src="/icon.png" alt="CivicSpark logo" className="h-10 w-10 rounded-xl" />
+
             <span className="text-xl font-bold text-card-foreground">CivicSpark</span>
           </div>
           <p className="mb-6 text-muted-foreground">
-            Made with ❤️ for civic engagement
+            Made by Santiago Silva and Sharvin Goyal under NEOLabs Software 
           </p>
-          <div className="text-sm text-muted-foreground">
-            © 2025 CivicSpark. All Rights Reserved.
-          </div>
+
         </div>
       </div>
     </footer>
