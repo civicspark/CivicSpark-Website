@@ -1,4 +1,5 @@
 import screenshotCalendar from "@/assets/screenshot-calendar.png";
+import screenshotMap from "@/assets/screenshot-map.png";
 import screenshotVote from "@/assets/screenshot-vote.png";
 import screenshotAcademy from "@/assets/screenshot-academy.png";
 import {
@@ -25,7 +26,7 @@ const screenshots = [
     description: "Academy",
   },
   {
-    image: screenshotCalendar,
+    image: screenshotMap,
     title: "Find polling locations near you",
     description: "Map",
   }

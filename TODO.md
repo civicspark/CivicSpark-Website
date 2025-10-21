@@ -3,4 +3,5 @@
 ## this file is designated for developers to view items that have to be completed
 
 - take new screenshot of myvote
+- change myvote description
 - get appstore and google play links
