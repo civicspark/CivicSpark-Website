@@ -19,7 +19,7 @@ const features = [
   {
     icon: Vote,
     title: "My Vote",
-    description: "Secure storage for voting preferences and personalized voting tools to stay organized.",
+    description: "Personal ai research tool to help you know what you are up against and plan your vote accordingly.",
   },
   {
     icon: Newspaper,
