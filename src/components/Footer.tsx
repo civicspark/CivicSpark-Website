@@ -11,7 +11,12 @@ const Footer = () => {
           <p className="mb-6 text-muted-foreground">
             Made by Santiago Silva and Sharvin Goyal under NEOLabs Software 
           </p>
-
+          <a 
+            href="mailto:civicsparkapp2025@gmail.com" 
+            className="inline-flex items-center gap-2 rounded-md bg-gradient-hero px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-gradient-hero/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </footer>
